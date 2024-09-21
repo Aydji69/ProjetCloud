@@ -15,6 +15,7 @@ services:
       - mysql_db
     volumes:
       - .:/app  
+      
   mysql_db:
     image: mysql:5.7
     container_name: mysql_db

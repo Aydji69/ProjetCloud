@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 def get_db_connection():
     db = MySQLdb.connect(
-        host='mysql_db',  # container name, not localhost
+        host='mysql_db',  
         user='root',
         password='root',
         db='mydatabase'
@@ -16,7 +16,7 @@ def get_db_connection():
 def index():
     connection = get_db_connection()
     cursor = connection.cursor()
-    cursor.execute('SELECT * FROM mytable')  # Replace with your table query
+    cursor.execute('SELECT * FROM mytable')  
     results = cursor.fetchall()
     cursor.close()
     connection.close()
